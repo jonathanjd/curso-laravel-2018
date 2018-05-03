@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Laravel Framework - Programate</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="plugin/menu/font-awesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="plugin/menu/menu.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-menu-title="Presentación" data-background-video="video/laravel-video.mp4" data-background-video-loop="true">
+                <h1>Laravel</h1>
+                <h3>Framework PHP</h3>
+            </section>
+            <section>
+                <section data-menu-title="Profesor">
+                    <h1>Jonathan Duran</h1>
+                    <h3>Desarrollador Full Stack</h3>
+                    <p>
+                        <i class="far fa-envelope"></i> HeadJD@gmail.com</p>
+                    <p>
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/jonathanjd" target="_blank">JonathanJD</a>
+                    </p>
+                </section>
+                <section data-menu-title="Conocimientos">
+                    <ul>
+                        <li>Laravel(Framework PHP)</li>
+                        <li>Base de Datos(MySQL)</li>
+                        <li>VueJS(Framework JS)</li>
+                        <li>Bootstrap(Framework CSS)</li>
+                        <li>Git(GitHub/GitLab)</li>
+                    </ul>
+                </section>
+                <section data-background-image="img/alumnos.png" data-background-size="auto" data-menu-title="Programate">
+                    <h5 style="color:rgb(66, 175, 250)">Programate</h5>
+                </section>
+            </section>
+            <!-- *** Laravel Start *** -->
+            <section>
+                <section>
+                    <h1>
+                        <a href="https://laravel.com/" target="_blank">Laravel</a>
+                    </h1>
+                    <p>
+                        Es un framework de código abierto para desarrollar aplicaciones y servicios web con php 5 y php 7. su filosofía es desarrollar
+                        código php de forma elegante y simple, evitando el "código espagueti". fue creado en 2011 y tiene
+                        una gran influencia de frameworks como ruby on rails, sinatra y asp.net
+
+                    </p>
+                </section>
+                <section>
+                    <h3>Framework</h3>
+                    <p>Es un conjunto de herramientas, la cuales nos permiten trabajar de forma sencilla, y que la mayoría de
+                        las veces podemos reutilizar en otros proyectos.</p>
+                </section>
+                <section>
+                    <h3>
+                        <a href="http://php.net/docs.php" target="_blank">PHP</a>
+                        </a>
+                    </h3>
+
+                    <p> Es un lenguaje de programación del lado del servidor gratuito e independiente de plataforma, rápido,
+                        muy popular para el desarrollo web, con una gran librería de funciones y mucha documentación.</p>
+
+                </section>
+                <section data-menu-title="Taylor Otwell">
+                    <h3>
+                        <a href="https://twitter.com/taylorotwell" target="_blank">Taylor Otwell</a>
+                    </h3>
+                    <img src="img/taylor.jpg">
+                    <p>Creador de Laravel</p>
+                </section>
+                <section>
+                    <h3>Documentación</h3>
+                    <a href="https://laravel.com/docs/5.3" target="_blank">
+                        <i class="fa fa-book fa-6x"></i>
+                    </a>
+                </section>
+                <section>
+                    <h3>Comunidad</h3>
+                    <a href="https://github.com/chiraggude/awesome-laravel" target="_blank">
+                        <i class="fa fa-users fa-6x"></i>
+                    </a>
+                </section>
+                <section>
+                    <h3>Features</h3>
+                    <ul>
+                        <li class="fragment">Empezar proyectos rápidos</li>
+                        <li class="fragment">Divertido de usar </li>
+                        <li class="fragment">Fácil de entender </li>
+                        <li class="fragment">Promueve patrones s.o.l.i.d</li>
+                        <li class="fragment">Buenas práctricas </li>
+                        <li class="fragment">Diferentes entornos (dev. prod. test) </li>
+                        <li class="fragment">Configurable y extendible</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>MVC</h3>
+                    <p>Es una forma de organizar el código de un sitio o una aplicación para ayudar a mantener el orden y estructura
+                        de un proyecto.</p>
+                </section>
+                <section class="center">
+                    <h3>Laravel MVC?</h3>
+                    <blockquote class="twitter-tweet" align="center" data-conversation="none" data-lang="es">
+
+                        <p lang="en" dir="ltr">
+                            <a href="https://twitter.com/Sileence?ref_src=twsrc%5Etfw">@Sileence</a> and that there is no way to fit all aspects of robust web apps into one of Those
+                            3 letters
+                        </p>&mdash; Taylor Otwell 🏄‍♂️ (@taylorotwell)
+                        <a href="https://twitter.com/taylorotwell/status/634388365752692736?ref_src=twsrc%5Etfw">20 de agosto de 2015</a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </section>
+            </section>
+            <!-- *** Laravel End *** -->
+
+            <!-- *** Instalación Start *** -->
+            <section>
+                <section>
+                    <h1>Instalación</h1>
+                </section>
+                <section>
+                    <h3>Requisitos</h3>
+                    <ul>
+                        <li class="fragment">PHP between 5.6.4 & 7.1.*</li>
+                        <li class="fragment">OpenSSL PHP Extension</li>
+                        <li class="fragment">PDO PHP Extension</li>
+                        <li class="fragment">Mbstring PHP Extension</li>
+                        <li class="fragment">Tokenizer PHP Extension</li>
+                        <li class="fragment">XML PHP Extension</li>
+                        <li class="fragment">Composer</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Xampp</h3>
+                    <a href="https://www.apachefriends.org/es/index.html" target="_blank">
+                        <i class="fa fa-download fa-6x"></i>
+                    </a>
+                </section>
+                <section>
+                    <h3>Laragon</h3>
+                    <a href="https://www.laragon.org/download/" target="_blank">
+                        <i class="fa fa-download fa-6x"></i>
+                    </a>
+                </section>
+                <section>
+                    <h3>
+                        <a href="https://getcomposer.org/" target="_blank">Composer</a>
+                    </h3>
+                    <p>
+                        Es un administrador de dependencias para PHP que nos permite descargar paquetes desde un repositorio para agregarlo a nuestro
+                        proyecto. Por defecto, se agregan a una carpeta llamada
+                        <strong>/vendor</strong>. De esta manera evitamos hacer las búsquedas manualmente y el mismo Composer se
+                        puede encargar de actualizar las dependencias que hayamos descargado por una nueva versión.
+                    </p>
+                </section>
+                <section>
+                    <h1>
+                        <a href="https://packagist.org/" target="_blank">Paquetes</a>
+                    </h1>
+                </section>
+                <section>
+                    <h3>Crear Proyecto</h3>
+                    <pre>
+                    <code class="bash" data-trim data-noescape>
+                            composer create-project --prefer-dist laravel/laravel NombreProyecto "5.3.*"
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Artisan</h3>
+                    <ul>
+                        <li class="fragment">Es una interfaz de línea de comandos(CLI - Command-line interface)</li>
+                        <li class="fragment">Nos ofrece un conjunto de comandos que nos pueden ayudar a realizar diferentes tareas durante el
+                            desarrollo de nuestra aplicación</li>
+                    </ul>
+                    <pre class="fragment">
+                        <code class="bash" data-trim data-noescape>
+                            php artisan
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Activar Servidor</h3>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                           php artisan serve
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <i class="fa fa-folder-open fa-6x"></i>
+                    <h3>Estructura de Carpeta</h3>
+                </section>
+                <section data-background="img/hola-mundo.gif" class="present">
+                    <h3 style="color:rgb(66, 175, 250)">Hola Mundo</h3>
+                    <p>
+                        <i class="fa fa-pen-square fa-2x"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-folder"></i> resources/views/welcome.blade.php
+                    </p>
+                </section>
+            </section>
+            <!-- *** Instalación End *** -->
+            <section>
+                <section>
+                    <h1>Rutas / Route</h1>
+                    <p>
+                        <i class="fa fa-folder"></i> routes
+                    </p>
+                </section>
+                <section>
+                    <h3>Métodos HTTP</h3>
+                    <ul>
+                        <li class="fragment">Get = Mostrar</li>
+                        <li class="fragment">Post = Crear</li>
+                        <li class="fragment">Put/Patch = Actualizar</li>
+                        <li class="fragment">Delete = Eliminar</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Creando Rutas</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+ Route::get('mi-primer-ruta', function () { return 'Mi Primer Ruta'; });
+                        </code>
+                    </pre>
+                    <ul>
+                        <li>Clase:
+                            <strong>Route</strong>
+                        </li>
+                        <li>Método:
+                            <strong>get</strong>
+                        </li>
+                    </ul>
+                    <p>
+                        <i class="fa fa-file"></i> web.php</p>
+                </section>
+                <section>
+                    <h3>Parámetros</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+Route::get('mi-edad/{edad}', function ($edad) { return 'Mi edad es ' . $edad; });
+                        </code>
+                    </pre>
+
+                </section>
+                <section>
+                    <h3>Rutas con Nombre</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+Route::get('soy-azul', function () {
+    echo "&lt;h1&gt;SOY AZUL&lt;/h1&gt;";
+    echo "&lt;a href=" . route('verde') . "&gt;Cambiar a Verde&lt;/a&gt;";
+})->name('azul');
+
+
+Route::get('soy-verde', function () {
+    echo "&lt;h1&gt;SOY VERDE&lt;/h1&gt;";
+    echo "&lt;a href=" . url('soy-azul') . "&gt;Cambiar a Azul&lt;/a&gt;";
+})->name('verde');
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Grupos</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+Route::group(['prefix' => 'admin'], function () {
+
+    Route::get('profesor', function () {
+        return 'Ruta del Profesor';
+    });
+
+    Route::get('estudiante', function () {
+        return 'Ruta del Estudiante';
+    });
+});
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Ejercicios</h1>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Vistas / Views</h1>
+                    <p>
+                        <i class="fa fa-folder"></i> resources/views
+                    </p>
+                </section>
+                <section>
+                    <h3>Creando Vistas</h3>
+                    <ul>
+                        <li>Crear el archivo velox.blade.php</li>
+                        <li>Definir Ruta</li>
+                    </ul>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                            Route::get('home', function () {
+                                return view('home');
+                            });
+                        </code>
+                    </pre>
+                    <p>Método
+                        <strong>view()</strong>
+                    </p>
+                    <ul>
+                        <li>Definir Diseño(HTML + CSS + JS)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Vista con Parámetros</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                            Route::get('velox', function () {
+
+                                $title = "Velox One Page Template";
+
+                                $subtitle = "Clean, Responsive, customizable one page template";
+
+                                return view('home') ->with('title', $title) ->with('subtitle', $subtitle);
+                             });
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Blade</h3>
+                    <p>Blade es el sistema de plantillas de Laravel, el cual nos permite generar HTML dinámico con una sintaxis
+                        mucho más limpia que si usaramos PHP plano.</p>
+                </section>
+                <section>
+                    <h3>Doble Bigotes</h3>
+                    <p>Para mostrar datos con blade utilizaremos las llaves dobles
+                        <strong>{{ }}</strong> y dentro de ellas escribiremos la variable o función con el contenido a mostrar</p>
+                </section>
+                <section>
+                    <h3>Mostrar Datos</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                            &lt;h1&gt;{{ $title }}&lt;/h1&gt;
+                            &lt;h4&gt;{{ $subtitle }}&lt;/h4&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Working con Layouts</h3>
+                    <ul>
+                        <li>Crear una carpeta con el nombre de "layouts"</li>
+                        <li>En la carpeta layouts crear un archivo base.blade.php</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Layouts Base</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;@yield('title')&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    @yield('content')
+&lt;/body&gt;
+
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Herencia</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+@extends('layouts.base')
+@section('title', 'Diseño Hijo')
+@section('content')
+&lt;h1&gt;Soy Diseño Hijo&lt;/h1&gt;
+@endsection
+                        </code>
+                    </pre>
+                    <p>Archivo
+                        <strong>hijo.blade.php</strong>
+                    </p>
+                </section>
+                <section>
+                    <h3>Include</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+&lt;h1&gt;Soy Box&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis dolorem ipsam vero deserunt nihil suscipit ducimus
+    voluptatem quibusdam! Quam eligendi nulla cum? Rerum doloremque sed odio ut at quis repellat.&lt;/p&gt;
+                        </code>
+                    </pre>
+                    <p>
+                        <i class="fa fa-folder"></i> resources/views/include/box.blade.php</p>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+@include('include.box')
+                        </code>
+                    </pre>
+                    <p>Trabajando con la directiva @include()</p>
+                </section>
+                <section>
+                    <h3>Directiva @if()</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+@if( count($jugadores) === 1 )
+    &lt;p&gt;Solo hay un jugador!&lt;/p&gt;
+@elseif (count($users) &gt; 1)
+    &lt;p&gt;Hay muchos jugadores!&lt;/p&gt;
+@else No hay ningún usuario
+    &lt;p&gt;No hay jugadores&lt;/p&gt;
+@endif
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Directiva foreach()</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+@foreach ($jugadores as $jugador)
+    &lt;p&gt;&lt;/p&gt;
+@endforeach
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Ejercicios</h1>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Controller / Controlador</h1>
+                </section>
+                <section>
+                    <h3>Crear</h3>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan make:controller MiPrimerController
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Definir Ruta</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                            Route::get('productos', 'MiPrimerController@productos');
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Working</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                        class MiPrimerController extends Controller {
+                            //
+                            public function productos() {
+                                # code...
+                                $myProductos = ['Laradora', 'Nevera', 'Cocina'];
+                                return view('productos');
+                            }
+                        }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Ejercicios</h1>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Base de Datos</h1>
+                </section>
+                <section>
+                    <h3>Migraciones</h3>
+                </section>
+                <section>
+                    <h3>Modelos</h3>
+                </section>
+                <section>
+                    <h3>Tinker</h3>
+                </section>
+                <section>
+                    <h3>Eloquent</h3>
+                </section>
+                <section>
+                    <h3>Seeder</h3>
+                </section>
+                <section>
+                    <h3>Factory + Faker</h3>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Mini-Proyecto</h1>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Conclusión</h1>
+                </section>
+                <section>
+                    <h1>Investigación</h1>
+                </section>
+                <section>
+                    <h1>Gracias</h1>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+
+            dependencies: [{
+                    src: 'plugin/markdown/marked.js'
+                },
+                {
+                    src: 'plugin/markdown/markdown.js'
+                },
+                {
+                    src: 'plugin/notes/notes.js',
+                    async: true
+                },
+                {
+                    src: 'plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: 'plugin/menu/menu.js'
+                }
+            ],
+
+            menu: {
+                markers: true,
+                numbers: true,
+                transitions: false,
+
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
