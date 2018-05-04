@@ -510,22 +510,274 @@ Route::group(['prefix' => 'admin'], function () {
                     <h1>Base de Datos</h1>
                 </section>
                 <section>
+                    <h1>Configuración</h1>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=homestead
+
+DB_USERNAME=homestead
+
+DB_PASSWORD=secret
+                        </code>
+                    </pre>
+                    <p>
+                        <i class="fa fa-file"></i> .env</p>
+                </section>
+                <section>
                     <h3>Migraciones</h3>
+                    <ul>
+                        <li>
+                            Es control de versiones sobre los cambios en la estructura de nuestra base de datos.
+                        </li>
+                        <li>
+                            Podemos crear el esquema de una tabla.
+                        </li>
+                        <li>
+                            Podemos con un simple comando ver reflejados los cambios de nuestra base de datos.
+                        </li>
+                        <li>
+                            Provee de portabilidad para diferentes gestores, usando el mismo código.
+                        </li>
+                        <li>
+                            El lenguaje en el cual se trabaja sigue siendo PHP.
+                        </li>
+                        <li>
+                            Son archivos que se encuentran el la ruta database/migrations/
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Ejecutar Migración</h3>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan migrate
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Crear Migración</h3>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan make:migration nombre_migracion
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan make:migration nombre_migracion --create=nombre_tabla
+                        </code>
+                    </pre>
+
+                </section>
+                <section>
+                    <h3>Estructura</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CrearTablaAlimentos extends Migration {
+
+    public function up() {
+        Schema::create('alimentos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+        });
+    }
+
+    public function down() {
+        Schema::dropIfExists('alimentos');
+    }
+}
+
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Método Up/Down</h3>
+                    <p>
+                        <strong>Método Up:</strong> es donde vamos a especificar la estructura de nuestra tabla.
+                    </p>
+                    <p>
+                        <strong>Método Down:</strong> elimina la tabla de la base de datos.
+                    </p>
+                </section>
+                <section>
+                    <h3>Artisan Migrate</h3>
+                    <ul>
+                        <li>
+                            php artisan migrate:rollback
+                        </li>
+                        <li>
+                            php artisan migrate:refresh
+                        </li>
+                        <li>
+                            php artisan migrate:reset
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Ejercicios</h3>
+                    <p>
+                        <a href="https://laravel.com/docs/5.3/migrations" target="_blank">Documentación</a>
+                    </p>
                 </section>
                 <section>
                     <h3>Modelos</h3>
+                    <p>
+                         Un modelo Laravel hace que sea muy fácil almacenar, leer (recuperar), actualizar y eliminar (CRUD) un recurso en una aplicación Laravel.
+                    </p>
+                    <p>
+                        Cada tabla de base de datos tiene un "Modelo" correspondiente que se utiliza para interactuar con esa tabla.
+                    </p>
+                </section>
+                <section>
+                    <h3>Crear Modelo</h3>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan make:model NombreModelo
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Clase Modelo</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                            namespace App;
+
+                            use Illuminate\Database\Eloquent\Model;
+
+                            class Alimento extends Model {
+
+                            }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Ejercicios</h1>
                 </section>
                 <section>
                     <h3>Tinker</h3>
+                    <p>
+                        Es una consola de comandos con la que podremos interactuar con todas las clases y métodos de nuestra aplicación, una herramienta muy útil a la hora de realizar pruebas de funcionamiento.
+                    </p>
+                    <p>Para usar o activar la consola de comandos de laravel solo debemos ejecutar el siguiente comando haciendo uso de artisan:</p>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan tinker
+                        </code>
+                    </pre>
                 </section>
                 <section>
                     <h3>Eloquent</h3>
+                    <p>
+                         El ORM Eloquent incluído con Laravel provee una implementación hermosa y sencilla de "ActiveRecord" para trabajar con su base de datos.
+                         Cada tabla de la base de datos tiene un "Modelo" correspondiente que es usado para interactuar con la tabla.
+                    </p>
+                    <p>
+                        Active record es un enfoque para acceso de datos en una base de datos.
+                    </p>
+                </section>
+                <section>
+                    <h3>Ejemplo</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                             public function index(){
+                                 $movies = Movie::all();
+                                 return view('list',compact('movies'));
+                            }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Ejercicios</h1>
+                    <a href="https://laravel.com/docs/5.3/eloquent" target="_blank">Documentación</a>
                 </section>
                 <section>
                     <h3>Seeder</h3>
+                    <p>
+                         Son archivos que nos van a permitir poblar nuestra base de datos para no tener que perder el tiempo escribiendo de forma manual todos los datos.
+                    </p>
                 </section>
                 <section>
-                    <h3>Factory + Faker</h3>
+                    <h3>Crear Seeder</h3>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan make:seeder AlimentosSeeder
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3><a href="https://github.com/fzaninotto/Faker" target="_blank">Faker</a></h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                             use Illuminate\Database\Seeder;
+
+                             use Faker\Factory as Faker;
+
+                             use App\Alimento;
+
+                             class AlimentosSeeder extends Seeder {
+
+                                public function run() {
+                                    $faker = Faker::create();
+                                    $alimento = new Alimento();
+                                    $alimento->nombre = $faker->word;
+                                    $alimento->save();
+                                }
+                            }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Ejecutar Seeder</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                             use Illuminate\Database\Seeder;
+
+                             class DatabaseSeeder extends Seeder {
+                                 public function run() {
+                                     $this->call(AlimentosSeeder::class);
+                                }
+                             }
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="bash" data-trim data-noescape>
+                            php artisan db:seed
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Model Factory</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                             $factory->define(App\Alimento::class, function(Faker\Generator $faker){
+                                 return [ 'nombre' => $faker->word ];
+                            });
+                        </code>
+                    </pre>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                             use Illuminate\Database\Seeder;
+
+                             class DatabaseSeeder extends Seeder {
+                                 public function run() {
+                                     $this->call(AlimentosSeeder::class);
+                                    factory(App\Alimento::class, 50)->create();
+                                }
+                            }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h1>Ejercicios</h1>
                 </section>
             </section>
             <section>
