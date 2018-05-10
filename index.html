@@ -631,7 +631,8 @@ class CrearTablaAlimentos extends Migration {
                 <section>
                     <h3>Modelos</h3>
                     <p>
-                         Un modelo Laravel hace que sea muy fácil almacenar, leer (recuperar), actualizar y eliminar (CRUD) un recurso en una aplicación Laravel.
+                        Un modelo Laravel hace que sea muy fácil almacenar, leer (recuperar), actualizar y eliminar (CRUD) un recurso en una aplicación
+                        Laravel.
                     </p>
                     <p>
                         Cada tabla de base de datos tiene un "Modelo" correspondiente que se utiliza para interactuar con esa tabla.
@@ -665,9 +666,11 @@ class CrearTablaAlimentos extends Migration {
                 <section>
                     <h3>Tinker</h3>
                     <p>
-                        Es una consola de comandos con la que podremos interactuar con todas las clases y métodos de nuestra aplicación, una herramienta muy útil a la hora de realizar pruebas de funcionamiento.
+                        Es una consola de comandos con la que podremos interactuar con todas las clases y métodos de nuestra aplicación, una herramienta
+                        muy útil a la hora de realizar pruebas de funcionamiento.
                     </p>
-                    <p>Para usar o activar la consola de comandos de laravel solo debemos ejecutar el siguiente comando haciendo uso de artisan:</p>
+                    <p>Para usar o activar la consola de comandos de laravel solo debemos ejecutar el siguiente comando haciendo
+                        uso de artisan:</p>
                     <pre>
                         <code class="bash" data-trim data-noescape>
                             php artisan tinker
@@ -677,8 +680,9 @@ class CrearTablaAlimentos extends Migration {
                 <section>
                     <h3>Eloquent</h3>
                     <p>
-                         El ORM Eloquent incluído con Laravel provee una implementación hermosa y sencilla de "ActiveRecord" para trabajar con su base de datos.
-                         Cada tabla de la base de datos tiene un "Modelo" correspondiente que es usado para interactuar con la tabla.
+                        El ORM Eloquent incluído con Laravel provee una implementación hermosa y sencilla de "ActiveRecord" para trabajar con su
+                        base de datos. Cada tabla de la base de datos tiene un "Modelo" correspondiente que es usado para
+                        interactuar con la tabla.
                     </p>
                     <p>
                         Active record es un enfoque para acceso de datos en una base de datos.
@@ -702,7 +706,8 @@ class CrearTablaAlimentos extends Migration {
                 <section>
                     <h3>Seeder</h3>
                     <p>
-                         Son archivos que nos van a permitir poblar nuestra base de datos para no tener que perder el tiempo escribiendo de forma manual todos los datos.
+                        Son archivos que nos van a permitir poblar nuestra base de datos para no tener que perder el tiempo escribiendo de forma
+                        manual todos los datos.
                     </p>
                 </section>
                 <section>
@@ -714,7 +719,9 @@ class CrearTablaAlimentos extends Migration {
                     </pre>
                 </section>
                 <section>
-                    <h3><a href="https://github.com/fzaninotto/Faker" target="_blank">Faker</a></h3>
+                    <h3>
+                        <a href="https://github.com/fzaninotto/Faker" target="_blank">Faker</a>
+                    </h3>
                     <pre>
                         <code class="php" data-trim data-noescape>
                              use Illuminate\Database\Seeder;
@@ -780,6 +787,663 @@ class CrearTablaAlimentos extends Migration {
                     <h1>Ejercicios</h1>
                 </section>
             </section>
+            <section>
+                <section>
+                    <h1>CRUD</h1>
+                    <img src="./img/crud.png" width="600" height="350">
+                </section>
+                <section>
+                    <h3>Generador</h3>
+                    <p>php artisan make:controller UserController --resource</p>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
+
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Rutas Resource</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                            Route::resource('users', 'UserController');
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Route List</h3>
+                    <p>
+                        php artisan route:list
+                    </p>
+                    <img src="./img/route-list.png" width="700" height="350" alt="">
+                    <p>
+                        <a href="https://laravel.com/docs/5.3/controllers" target="_blank">
+                            <i class="fa fa-info"></i>
+                        </a>
+                    </p>
+                </section>
+                <section>
+                    <h3>Vista Resource</h3>
+                    <img src="./img/vista-resource.jpg" width="300" height="300" alt="">
+                </section>
+                <section>
+                    <h3>Método Create()</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+                            public function create()
+                            {
+                                //
+                                return view('create');
+                            }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Vista Create</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Crear Usuario&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col"&gt;
+
+                &lt;h1&gt;Crear Usuario&lt;/h1&gt;
+                &lt;hr&gt;
+
+                &lt;form action="{{ route('users.store') }}" method="post"&gt;
+
+                    {{ csrf_field() }}
+
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="name"&gt;Name&lt;/label&gt;
+                        &lt;input type="text" class="form-control" name="name" placeholder="My Name"&gt;
+                    &lt;/div&gt;{{-- .form-group --}}
+
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="email"&gt;Email&lt;/label&gt;
+                        &lt;input type="email" class="form-control" name="email" placeholder="My Email"&gt;
+                    &lt;/div&gt;{{-- .form-group --}}
+
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="password"&gt;Password&lt;/label&gt;
+                        &lt;input type="password" class="form-control" name="password" placeholder="My Password"&gt;
+                    &lt;/div&gt;{{-- .form-group --}}
+
+                    &lt;button type="submit" class="btn btn-primary"&gt;Create&lt;/button&gt;
+
+                &lt;/form&gt;
+
+
+            &lt;/div&gt;{{-- .col --}}
+        &lt;/div&gt;{{-- .row --}}
+    &lt;/div&gt;{{-- .container --}}
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Método Store()</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        return redirect()->back();
+
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Session Flash</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        Session::flash('msgSuccess', 'User Saved!');
+
+        return redirect()->back();
+
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Mostrar Flash</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                             @if (Session::has('msgSuccess'))
+                            &lt;div class="alert alert-success" role="alert"&gt;
+                                &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+                                &lt;p&gt;{{ Session::get('msgSuccess') }}&lt;/p&gt;
+                            &lt;/div&gt;
+                            @endif
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Validar Datos</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+
+        $this->validate(
+            $request,
+            [
+                'name' => 'required',
+                'email' => 'required|email|max:255|unique:users',
+                'password' => 'required|min:6',
+            ]
+        );
+
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        Session::flash('msgSuccess', 'User Saved!');
+
+        return redirect()->back();
+
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Mostrar Validación</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                             @if (count($errors) > 0)
+                            &lt;div class="alert alert-danger" role="alert"&gt;
+                                &lt;ul&gt;
+                                    @foreach ($errors-&gt;all() as $error)
+                                    &lt;li&gt;{{ $error }}&lt;/li&gt;
+                                    @endforeach
+                                &lt;/ul&gt;
+                            &lt;/div&gt;
+                            @endif
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Método Index()</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        $users = User::all();
+        return view('index')->with('users', $users);
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Vista Index</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang="en"&gt;
+
+                            &lt;head&gt;
+                                &lt;meta charset="UTF-8"&gt;
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                                &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+                                &lt;title&gt;Listar Usuario&lt;/title&gt;
+                                &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+                                    crossorigin="anonymous"&gt;
+                            &lt;/head&gt;
+
+                            &lt;body&gt;
+
+                                &lt;div class="container"&gt;
+                                    &lt;div class="row"&gt;
+                                        &lt;div class="col"&gt;
+                                            &lt;h1&gt;Listar Usuario&lt;/h1&gt;
+                                            &lt;table class="table table-hover"&gt;
+                                                &lt;thead class="thead-dark"&gt;
+                                                    &lt;tr&gt;
+                                                        &lt;th&gt;#&lt;/th&gt;
+                                                        &lt;th&gt;Name&lt;/th&gt;
+                                                        &lt;th&gt;Email&lt;/th&gt;
+                                                        &lt;th&gt;&lt;/th&gt;
+                                                        &lt;th&gt;&lt;/th&gt;
+                                                        &lt;th&gt;&lt;/th&gt;
+                                                    &lt;/tr&gt;
+                                                &lt;/thead&gt;
+                                                &lt;tbody&gt;
+                                                    @foreach ($users as $user)
+                                                    &lt;tr&gt;
+                                                        &lt;td&gt;{{ $user-&gt;id }}&lt;/td&gt;
+                                                        &lt;td&gt;{{ $user-&gt;name }}&lt;/td&gt;
+                                                        &lt;td&gt;{{ $user-&gt;email }}&lt;/td&gt;
+                                                        &lt;td&gt;
+                                                            &lt;a href="" class="btn btn-primary"&gt;Show&lt;/a&gt;
+                                                        &lt;/td&gt;
+                                                        &lt;td&gt;
+                                                            &lt;a href="" class="btn btn-warning"&gt;Edit&lt;/a&gt;
+                                                        &lt;/td&gt;
+                                                        &lt;td&gt;
+                                                            &lt;button type="submit" class="btn btn-danger"&gt;Delete&lt;/button&gt;
+                                                        &lt;/td&gt;
+                                                    &lt;/tr&gt;
+                                                    @endforeach
+                                                &lt;/tbody&gt;
+                                            &lt;/table&gt;{{-- .table table-hover --}}
+
+                                        &lt;/div&gt;{{-- .col --}}
+                                    &lt;/div&gt;{{-- .row --}}
+                                &lt;/div&gt;{{-- .container --}}
+
+                            &lt;/body&gt;
+
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+
+                </section>
+
+                <section>
+                    <h3>Crear Paginación</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        $users = User::orderBy('id', 'desc')->paginate(4);
+        return view('index')->with('users', $users);
+    }
+                        </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Mostrar Paginación</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                            &lt;div&gt;
+                                {{ $users-&gt;links() }}
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Método Show()</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+        $user = User::find($id);
+        return view('show')->with('user', $user);
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Vista Show</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Show Usuario&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col"&gt;
+                &lt;h1&gt;Show Usuario&lt;/h1&gt;
+                &lt;p&gt;
+                    &lt;strong&gt;Name:&lt;/strong&gt; {{ $user-&gt;name }}&lt;/p&gt;
+                &lt;p&gt;
+                    &lt;strong&gt;Email:&lt;/strong&gt; {{ $user-&gt;email }}&lt;/p&gt;
+                &lt;a href="{{ route('users.index') }}" class="btn btn-primary"&gt;Regresar&lt;/a&gt;
+            &lt;/div&gt;{{-- .col --}}
+        &lt;/div&gt;{{-- .row --}}
+    &lt;/div&gt;{{-- .container --}}
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Link Show</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                            &lt;td&gt;
+                                &lt;a href="{{ route('users.show' , $user-&gt;id) }}" class="btn btn-primary"&gt;Show&lt;/a&gt;
+                            &lt;/td&gt;
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Método Destroy()</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+        $user = User::find($id);
+        $user->delete();
+        Session::flash('msgDanger', 'User Deleted!');
+        return redirect()->back();
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Mostrar Delete</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                            &lt;td&gt;
+                                &lt;form action="{{ route('users.destroy', $user-&gt;id) }}" method="post"&gt;
+                                    {{ method_field('delete') }}
+                                    {{ csrf_field() }}
+                                    &lt;button type="submit" class="btn btn-danger"&gt;Delete&lt;/button&gt;
+                                &lt;/form&gt;
+                            &lt;/td&gt;
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Método Edit</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+        $user = User::find($id);
+        return view('edit')->with('user', $user);
+    }
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Link Edit</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+                            &lt;td&gt;
+                                &lt;a href="{{ route('users.edit' , $user-&gt;id) }}" class="btn btn-warning"&gt;Edit&lt;/a&gt;
+                            &lt;/td&gt;
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Vista Edit</h3>
+                    <pre>
+                        <code class="html" data-trim data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+    &lt;title&gt;Edit Usuario&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col"&gt;
+
+                @if (count($errors) &gt; 0)
+                &lt;div class="alert alert-danger" role="alert"&gt;
+                    &lt;ul&gt;
+                        @foreach ($errors-&gt;all() as $error)
+                        &lt;li&gt;{{ $error }}&lt;/li&gt;
+                        @endforeach
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                @endif
+
+                &lt;h1&gt;Edit Usuario&lt;/h1&gt;
+                &lt;hr&gt;
+
+                &lt;form action="{{ route('users.update', $user->id) }}" method="post"&gt;
+                    {{ method_field('put') }}
+                    {{ csrf_field() }}
+                    &lt;div class="form-group"&gt;
+                        &lt;label for="name"&gt;Name&lt;/label&gt;
+                        &lt;input type="text" class="form-control" name="name" value="{{ $user-&gt;name }}"&gt;
+                    &lt;/div&gt;{{-- .form-group --}}
+
+                    &lt;button type="submit" class="btn btn-primary"&gt;Update&lt;/button&gt;
+
+                &lt;/form&gt;
+
+
+            &lt;/div&gt;{{-- .col --}}
+        &lt;/div&gt;{{-- .row --}}
+    &lt;/div&gt;{{-- .container --}}
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Método Update()</h3>
+                    <pre>
+                        <code class="php" data-trim data-noescape>
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+        $this->validate(
+            $request,
+            [
+                'name' => 'required'
+            ]
+        );
+
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->save();
+        Session::flash('msgUpdate', 'User Updated!');
+        return redirect()->route('users.show', $user->id);
+
+    }
+                        </code>
+                    </pre>
+                </section>
+
+            </section>
+
             <section>
                 <section>
                     <h1>Mini-Proyecto</h1>
